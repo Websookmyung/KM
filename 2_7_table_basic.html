@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>표의 기본 구성</title>
+  </head>
+  <body>
+    <h3>기본적인 표의 표현</h3>
+    <table border="1">
+      <tr>
+        <th>책 제목</th> <th>저자</th> <th>출판사</th>   <!--제목 부분-->
+      </tr>
+      <tr>
+        <td>Hunger Games</td> <td>Suzanne Collins</td> <td>Scholastic</td>
+      </tr>
+      <tr>
+        <td>제3인류</td> <td>베르나르 베르베르</td> <td>주식회사 열린책들</td>
+      </tr>
+      <tr>
+        <td>위대한 개츠비</td> <td>F.스콧 피츠제럴드</td> <td>찰스 스크리브너즈 선 출판사</td>
+      </tr>
+
+    </table>
+
+    <h3>표의 구조적 표현: 세로 셀 합치기</h3>
+    <table border="1">
+      <tr>
+        <td rowspan="3">아래 줄(rows)<br>셀 합치기</td> <td>1행(row) 2열</td>
+      </tr>
+      <tr>
+        <!--2행 1열 없음--> <td>2행(row) 2열</td>
+      </tr>
+      <tr>
+        <!--3행 1열 없음--> <td>3행(row) 2열</td>
+      </tr>
+    </table>
+
+    <h3>표의 구조적 표현: 가로 셀 합치기</h3>
+    <table border="1">
+      <tr>
+        <td colspan="3">옆 칸(cols) 셀 합치기</td>
+      </tr>
+      <tr>
+        <td>2행(row) 1열</td> <td>2행(row) 2열</td> <td>2행(row) 3열</td>
+      </tr>
+    </table>
+
+    <h3>표의 구조적 표현</h3>
+    <table border="1">
+      <caption>과목별 추천도서</caption>  <!-- 표 위에 위치한 표의 설명 제목-->
+      <thead>
+        <tr>
+          <th>과목</th> <th>책 제목</th> <th>저자</th> <th>출판사</th>
+        </tr>
+      </thead>
+      <tfoot>
+        <tr>
+          <th>합계</th> <td colspan="3">3권</td>
+        </tr>
+      </tfoot>
+      <tbody>
+        <tr>
+          <td rowspan="3">웹프로그래밍</td> <td>HTML5 웹 프로그래밍 입문</td>
+          <td>임순범, 박희민</td> <td>생능</td>
+        </tr>
+        <tr>
+          <td>소셜미디어 시대의 인터넷 활용</td> <td>최윤철</td> <td>생능</td>
+        </tr>
+        <tr>
+          <td>What Is HTML5</td> <td>B. McLaughLin</td> <td>O'Reilly</td>
+        </tr>
+      </tbody>
+
+    </table>
+
+  </body>
+</html>
