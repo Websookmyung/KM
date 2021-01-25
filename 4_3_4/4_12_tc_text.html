@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>문자 관련 CSS 속성</title>
+    <style type="text/css">
+      h3 {font-family: "맑은고딕" san-serif; color:red; text-shadow: 3px 3px 4px grey}
+      h3:after {xontent: "(sblim)"; font-size:10pt; text-shadow: 1px 1px 12px green }
+      p {font-family: "Times New Roman" "돋움" serif; line-height: 10pt}
+      #first {text-align:left; letter-spacing: 2pt; word-spacing: 8pt}
+      #second {text-align:left; text-indent: 2em; letter-spacing: 2pt; word-spacing: 2pt}
+      #third {text-align:right; }
+      #fourth {text-align: right; }
+      #cap {text-transform: capitalize }
+      #upper {text-transform: uppercase }
+    </style>
+  </head>
+  <body>
+    <h3><strong>CSS</strong> 문자관련 속성 </h3>
+    <p id="first">왼쪽정렬, 문자간격 3pt, 단어간격 8pt</p>
+    <p id="second">왼쪽정렬, 들여쓰기 2글자, 문자간격 3pt, 단어간격 8pt</p>
+    <p id="third">오쪽정렬, text-decoration: <span id="cap">capitalize</span>,
+      <span id="upper">upperline</span>
+    </p>
+
+  </body>
+</html>
