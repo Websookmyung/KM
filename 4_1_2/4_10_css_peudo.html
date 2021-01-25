@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>가상클래스 선택자</title>
+    <style type="text/css">
+      p {font-size: 10pt}
+      a:link { color: blue; }                     /*a 태그의 하이퍼링크*/
+      a:visited { color: green; }                 /*방문한 a 태그의 링크*/
+      h3:before {content: "^^"; color: blue }     /*h3 요소의 앞에 파란색 ^^ 삽입 */
+      h3:before {content: "^~~^"; color: blue }     /*h3 요소의 뒤테 콘텐츠 삽입*/
+    </style>
+  </head>
+  
+  <body>
+    <h3><strong>스타입시트</strong> 이해하기</h3>
+    <p>이 예제는 <strong>CSS</strong>의 개념을 설명한다</p>
+    <p>선택자에 <a href="http://www.naver.com">가상클래스</a>와
+      <a href="http://youtube.com">선택자 조합</a>을 적용하여 스타일을 지정합니다.
+    </p>
+  </body>
+</html>
