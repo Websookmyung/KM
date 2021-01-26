@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>배경 관련 CSS 속성</title>
+    <style type="text/css">
+      h3 {color: red; background-color: #90ff90}
+      h3:after {content: "(sblim)"; font-size:10pt; background-color: yellow}
+      #first {background-image: url(logo1.png); background-repeat:repeat:repeat-x; }
+      #second {background-image: url(logo1.png); }
+      #third {background-image: url(logo1.png); background-repeat:no-repeat; background-position: center bottom}
+    </style>
+  </head>
+
+  <body>
+    <h3>CSS 배경관련 속성</h3>
+    <table border="1">
+      <tr>
+        <td id="first">배경 이미지 <br> url(logo1.png) <br> first </td>
+        <td id="second">배경 이미지 <br> url(logo1.png) <br> second</td>
+        <td id="third">배경 이미지 <br> url(logo1.png) <br> third </td>
+      </tr>
+    </table>
+  </body>
+</html>
