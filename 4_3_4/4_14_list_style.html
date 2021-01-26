@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>목록에 스타일 지정하기</title>
+    <style type="text/css">
+        ol li {list-style-type: upper-alpha}   /*과목명은 대문자 A, B, C*/
+        li.usa { list-style-type: disc }       /*영문조서는 검은색 원*/
+        li.kor {list-style-type: circle}       /*국내도서는 반원*/
+        li.renew {list-style-type: square}     /*신규도서는 네모 */
+
+    </style>
+  </head>
+  <body>
+    <h3>과목별 추천도서 목록</h3>
+    <ol>
+      <li>IT기술의 이해</li>
+      <ul>
+        <li class="kor">이.., 임.., 한.., 컴퓨터와 IT 기술의 이해</li>
+        <li class="usa">D.Marley, C. Parker, Understanding Computers</li>
+        <li class="usa">G. Shelly, M.Vermaat, Discovering Computers</li>
+      </ul>
+      <li>웹프로그래밍</li>
+      <ul>
+        <li class="kor">임.., 박.., 공.., HTML 웹 프로그래밍</li>
+        <li class="kor">임.., 박.., 공.., 소셜미디어 시대의 인터넷 활용</li>
+        <li class="renew">B. McLaughlin, What is HTML5? </li>
+      </ul>
+    </ol>
+
+  </body>
+</html>
