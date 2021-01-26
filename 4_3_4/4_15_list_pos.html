@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>목록의 글머리 위치 지정하기</title>
+    <style media="screen">
+      ul.outside-list {list-style-position: outside}   /*내어쓰기*/
+      ul.inside-list {list-style-position: inside}     /*들여쓰기*/
+      li.usa {list-style-image: url("flag_usa.png")}   /*미국기*/
+      li.kor {list-style-image: url("flag_kor.png")}   /*한국기*/
+      p {font-weight: bold}
+    </style>
+  </head>
+
+  <body>
+    <h3>과목별 추천도서 목록</h3>
+    <ul class="outside-list">
+      <p>IT기술의 이해</p>
+      <li class="kor">최.., 임.., 한.., 컴퓨터와 IT기술의 이해</li>
+      <li class="usa">D.Marley, C. Parker, Understanding Computers</li>
+      <li class="usa">G. Shelly, M.Vermaat, Discovering Computers</li>
+    </ul>
+    <ul class="inside-list">
+      <p>웹프로그래밍</p>
+      <li class="kor">임.., 박.., 공.., HTML 웹 프로그래밍</li>
+      <li class="kor">임.., 박.., 공.., 소셜미디어 시대의 인터넷 활용</li>
+      <li class="renew">B. McLaughlin, What is HTML5? </li>
+    </ul>
+
+  </body>
+</html>
