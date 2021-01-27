@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>박스 모델 확인</title>
+    <style media="screen">
+      p {font-size: 10pt; line-height: 24pt}
+
+      /*margin으로 설정한 왼쪽으로 70px 이후에 연초록색의 하이라이트 시작하고 오른쪽으로 60px남기고 하이라이트 끝 */
+      h3 {color: red; background-color: #90ff90; margin-left: 70px; margin-right: 60px}   /*글: 빨간색*/
+      h3:after {content: "<h3:after> part"; font-size: 10pt}
+
+      /*노란색의 배경이 상하좌우(padding) 20px 만큼 지점까지 유지*/
+      p {background-color: #ffff80; padding: 20px; border: meddium dotted red}
+      #next {line-height: 2pt; margin-left: 30%; padding: 8px; border: 4px inset blue}
+
+      /*padding 바꾸면 박스의 크기 변하고 margin 바꾸면 박스의 시작과 끝의 위치가 바뀐다. */
+      strong, .red1 {backgrond-color: blue; margin: 20px; padding: 7px; border: 1px solid black}  /*border 설정하니 박스 그려진다.*/
+    </style>
+  </head>
+
+  <body>
+    <h3> <strong>스타일시트 (h3의 strong 부분)</strong>이해하기(그냥 h3 부분) </h3>
+    <p>이 예제는(그냥 p) <strong>박스모델(p의 strong 부분)</strong>의 개념을 설명합니다
+      <br><span class="red1">클래스(red1)</span>와 ID로 스타일 지정
+    </p>
+    <p id="next">다음 예제로 이어진다</p>
+  </body>
+</html>
