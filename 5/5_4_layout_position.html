@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>위치 값 유형에 따른 위치지정</title>
+    <style media="screen">
+      #w3c_static {position: static; }   /*static: 기본 값*/
+      #h5_static {position: static; top: 100px; left: 300px;}
+
+      /*left로 왼쪽의 공백 부분 지정, relative: 직전 요소에 의해 상대적 배치*/
+      #css_relative {position: relative; left: 50px; }
+
+      /*absolute: 걍 지정한 위치에 배치 (상대성 없음)*/
+      #h5_absolute {position: absolute; top: 305px; left: 100px; }  
+
+      /*fixed는 스크롤을 내려도 그림이 항상 화면의 동일한 위치에 있다*/
+      #css_fixed {position: fixed; top: 20px; right: 30px; }
+    </style>
+  </head>
+
+  <body>
+    <h3> button01 image
+      <img src="button01.png" id="w3c_static" />
+      h3 부분 (위에 이미지 배치 코드 위치) <br />
+      src에 같은 폴더에 있는 이미지 이름 쓰기  <br />
+      style에서 정의한 #w3c_static (id) 형식인 position: static;으로 그림 배치
+    </h3>
+
+    <p> clock image
+      <img src="clock.png" id="css_relative"/>
+      p 부분 (위에 이미지 배치 코드 위치) <br />
+      style 형식에 #css_relative {position: relative; left: 80px; }를 정의하고 id로 호출
+    </p>
+    <h3> calander image
+      <img src="calander.png" id="css_fixed" />
+      h3 부분 (위에 이미지 배치 코드 위치) <br />
+      src에 같은 폴더에 있는 이미지 이름 쓰기  <br />
+      style에서 정의한 #w3c_static (id) 형식인 position: static;으로 그림 배치
+    </h3>
+
+    <p> thumb up image
+      <img src="thumb_up.png" id="h5_absolute"/>
+      p 부분 (위에 이미지 배치 코드 위치) <br />
+      style 형식에 #h5_absolute {position: absolute; top: 205px; left: 100px;}를 정의하고 id로 호출
+    </p>
+
+    <h3>스크롤을 위한 부과 부분</h3>
+    <p>lovely: 빌리 아일리시, 칼리드</p>
+    <pre>
+      Thought I found a way
+      Thought I found a way, out (found)
+      But you never go away (never go away)
+      So I guess I gotta stay now
+      Oh, I hope some day I'll make it out of here
+      Even if it takes all night or a hundred years
+      Need a place to hide, but I can't find one near
+      Wanna feel alive, outside I can't fight my fear
+      Isn't it lovely, all alone?
+      Heart made of glass, my mind of stone
+      Tear me to pieces, skin to bone
+      Hello, welcome home
+      Walkin' out of town
+      Lookin' for a better place (lookin' for a better place)
+      Something's on my mind (mind)
+      Always in my head space
+      But I know some day I'll make it out of here
+      Even if it takes all night or a hundred years
+      Need a place to hide, but I can't find one near
+      Wanna feel alive, outside I can't fight my fear
+      Isn't it lovely, all alone?
+      Heart made of glass, my mind of stone
+      Tear me to pieces, skin and bone
+      Hello, welcome home
+      Whoa, yeah
+      Yeah, ah
+      Whoa, whoa
+      Hello, welcome home
+
+    </pre>
+
+  </body>
+</html>
