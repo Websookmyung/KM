@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>z-index로 앞뒤에 배치하기</title>
+
+    <style media="screen">
+      #z1_relative {z-index:1 ; position: relative; top: -20px; left: 80px; }
+      #z2_relative {z-index:2 ; position: relative; top: -5px; left: 45px; }
+      #z3_relative {z-index:3 ; position: relative; top: 5px; left: 10px; }
+      #z9_relative {z-index:9 ; position: relative; top: -20px; left: 80px; }
+      #z8_relative {z-index:8 ; position: relative; top: -5px; left: 45px; }
+      #z7_relative {z-index:7 ; position: relative; top: -5px; left: 45px; }
+    </style>
+  </head>
+  <body>
+    <h3>5.2.1 앞 뒤 순서를 지정하는 z-index</h3>
+    <img src="1.png" id="z1_relative">
+    <img src="2.jpeg" id="z2_relative">
+    <img src="3_1.png" id="z3_relative">
+    <img src="4.png" id="z9_relative">
+    <img src="5.png" id="z8_relative">
+    <img src="6.jpeg" id="z7_relative">
+  </body>
+
+  <h3>z-index 설명</h3>
+  <p>겹치는 부분이 생길 때 숫자가 큰 것이 앞에 배치된다</p>
+</html>
