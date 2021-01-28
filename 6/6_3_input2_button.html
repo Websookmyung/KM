@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>버튼 입력 예제</title>
+  </head>
+  <body>
+    <h3>버튼 입력</h3>
+    <form action="index.html" method="get">
+      <p>취미 (중복 선택)
+        <input type="checkbox" name="hobby" value="read"> 독서
+        <input type="checkbox" name="hobby" value="movie" checked> 영화  <!--checked: 기본 선택-->
+        <input type="checkbox" name="hobby" value="music"> 음악
+        <input type="checkbox" name="hobby" value="value"> 스포츠
+      </p>
+
+      직업:
+      <select size="4" name="job" multiple>
+        <option value="student" selected>학생</option>  <!--selected: 기본 선택-->
+        <option value="company" >회사원</option>
+        <option value="teacher" >교사</option>
+        <option value="others" >자영업</option>
+      </select>
+
+      <hr>
+      <input type="submit" value="전송하기"> &nbsp;
+      <input type="reset" value="초기화"> &nbsp;
+      <input type="button" value="확인하기"> &nbsp;
+      <input type="image" src="button01.png" alt="전송버튼"> &nbsp; 
+
+    </form>
+
+  </body>
+</html>
