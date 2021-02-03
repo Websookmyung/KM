@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>자바스크립트 switch 문 </title>
+  </head>
+  <body>
+    <script type="text/javascript">
+      var title1="NCT U: Resonance";
+      var title2="NCT 127: Work It";
+      var title3="NCT DREAM: BOSS";
+
+      document.write("<caption> 앨범 주문 입력 내용 </caption>");
+      document.write("<tr>");
+      document.write("<th> 제목 </th>");
+      document.write("</tr>");
+
+      var title_list=title1+"\n"+title2+"\n"+title3;
+      var choice=prompt("책 번호를 입력하세요...\n"+title_list, "");   //기본 입력 값: ""(없음)
+
+      switch (choice) {
+        case "NCT U":
+        name=title1; break;
+        case "NCT 127":
+        name=title2; break;
+        case "NCT DREAM":
+        name=title3; break;
+        default:
+        alert("리스트에 없는 앨범을 선택하셨습니다.");
+        title="";
+      }
+
+      document.write("<tr>")
+      document.write("<td>"+ name +"</td>");
+      document.write("</tr>");
+    </script>
+
+  </body>
+</html>
