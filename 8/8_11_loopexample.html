@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>자바스크립트 for 문 </title>
+  </head>
+  <body>
+    <script type="text/javascript">
+      var title1="U: Resonance";
+      var title2="127: Work It";
+      var title3="DREAM: BOSS";
+
+      var n =prompt("주문할 책 수량을 입력 하세요.", "1");
+
+      for (i=0; i<n; i++) {
+        var title_list=title1+"\n"+title2+"\n"+title3;
+        var choice=prompt("책 제목을 선책하세요...\n"+title_list, "");
+
+        if (choice=="U") {
+          name=title1;
+        } else if (choice=="127") {
+          name=title2;
+        } else if (choice=="DREAM") {
+          name=title3;
+        } else {
+          alert ("리스트에 없는 책을 선택했습니다.");
+          title="";
+        }
+
+        document.write("["+(i+1)+"]"+name+"<br>");
+      }
+
+    </script>
+
+  </body>
+</html>
