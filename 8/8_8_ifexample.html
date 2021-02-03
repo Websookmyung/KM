@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>자바스크립트 if 문 </title>
+  </head>
+  <body>
+    <script type="text/javascript">
+      var title1="1: Resonance";
+      var title2="2: Work It";
+      var title3="3: BOSS";
+
+      document.write("<caption> 앨범 주문 입력 내용 </caption>");
+      document.write("<tr>");
+      document.write("<th> 제목 </th>");
+      document.write("</tr>");
+
+      var title_list=title1+"\n"+title2+"\n"+title3;
+      var choice=prompt("책 번호를 입력하세요...\n"+title_list, "1");   //기본 입력 값: 1
+
+      if (choice=="1") {
+        name=title1;
+      } else if (choice=="2") {
+        name=title2;
+      } else if (choice=="3") {
+        name=title3;
+      } else {
+        alert("리스트에 없는 앨범을 선택하셨습니다.");
+      }
+
+      document.write("<tr>")
+      document.write("<td>"+ name +"</td>");
+      document.write("</tr>");
+    </script>
+
+  </body>
+</html>
