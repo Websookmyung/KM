@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <script type="text/javascript">
+      var today=new Date();
+      var y=today.getFullYear();
+      var m=today.getMonth();
+      var d=today.getDate();
+
+      document.write("오늘 날짜: "+y+"년"+m+"월"+d+"일 <br>");
+
+      var start=new Date();
+      var t1=start.getTime();
+
+      var sum=0;
+      for (i=0; i<1000000; i++) {
+        sum=sum+i;
+      }
+
+      var end=new Date();
+      var t2=end.getTime();
+
+      document.write("1에서 1000000까지 더하는데 걸린 시간: "+(t2-t1)+"ms <br>");
+      document.write("<br>");
+      document.write("sin(60도)= "+Math.sin(Math.PI/3)+"<br>");
+      document.write("ceil(3.4)= "+Math.ceil(3.4)+"<br>");
+      document.write("floor(3.4)= "+Math.floor(3.4)+"<br>");
+      document.write("round(3.4)= "+Math.round(3.4)+"<br>");
+
+    </script>
+
+  </body>
+</html>
