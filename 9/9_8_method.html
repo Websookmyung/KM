@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>객체 메소드 정의</title>
+  </head>
+  <body>
+    <p> A Simple JavaScript Example for Method <br></p>
+    <script type="text/javascript">
+      function display_book( )  {
+        document.write("Title: "+this.title+"<br>") ;
+        document.write("“Publisher: "+this.publisher+"<br>") ;
+        document.write("“Author: "+this.author+"<br>") ;
+      }
+
+      function Book (title_value, publisher_value, author_value) {
+        this.title=title_value ;
+        this.publisher=publisher_value ;
+        this.author=author_value ;
+        this.display=display_book ;
+      }
+      var book_obj=new Book ("멀티미디어 배움터","생능출판사", "최윤철, 임순범") ;
+      book_obj.display() ;    // 함수는 객체에 소속되고 그 객체의 메소드가 된다.
+    </script>
+
+
+
+  </body>
+</html>
