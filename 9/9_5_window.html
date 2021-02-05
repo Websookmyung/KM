@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>자바스크립트 배열 메소드 사용</title>
+  </head>
+
+  <body>
+    <script type="text/javascript">
+      document.write("자바스크립트 window <br>");
+      document.write("<br>");
+
+      function open_window() {
+        var url=prompt("원하는 URL 주소를 입력하시오");
+        if (url) win=window.open(url);
+      }
+    </script>
+
+    <button onclick="open_window();">Open a page with new window</button>
+    <button onclick="win.close();">Close th window</button>
+
+  </body>
+</html>
