@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>DOM 접근 방법</title>
+  </head>
+
+  <body>
+    <form class="" action="index.html" method="post">
+      <input type="text" id="username" name="" value="Name of User">
+    </form>
+
+    <script type="text/javascript">
+      var dom=document.getElementById("username");   //id가 username인 form
+      alert(dom.value);                              //dom 객체의 value 내용("Name of User") 출력
+                                                     //확인 누르는 팝업
+      var nameValue=prompt("Type new value of text box", "");   //prompt: 입력 창과 함께 확인/취소 메시지 뜸
+                                                                //메시지 내용: "Type new value of text box"
+                                                                //기본 입력값: ""(없음)
+      dom.value=newValue;
+    </script>
+
+  </body>
+</html>
