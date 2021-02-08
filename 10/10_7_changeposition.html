@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>위치 스타일 속성 변경</title>
+  </head>
+
+  <body>
+    <div id="outerBox" style="background: blue; width: 550px; height: 300px;" class=""></div>
+    <div id="innerBox" style="background: yellow; width: 450px; height: 200px; position: absolute; left:50px; top:50px" class="">
+      <img id="img1" src="flag_kor.png" width="100px" style="position:absolute; left:50px; top:25px; visibility: visible;" alt="">
+      <img id="img2" src="flag_usa.png" width="100px" style="position:absolute; left:175px; top:25px; visibility: visible;" alt="">
+      <img id="img3" src="logo1.png" width="100px" style="position:absolute; left:300px; top:25px; visibility: visible;" alt="">
+
+    </div>
+
+    <script type="text/javascript">
+      function changePositions(id) {
+        for (i=1; i<=3; i++) {
+          var left=document.getElementById("left"+i).value;
+          var top=document.getElementById("top"+i).value;
+          document.getElementById("img"+i).style.left=left+"px";
+          document.getElementById("img"+i).style.top=top+"px";
+        }
+      }
+    </script>
+
+    <form>
+      Image 1: Left <input type="text" id="left1" size="2" >
+      Top <input type="text" id="top1" size="2" > <br>
+
+      Image 2: Left <input type="text" id="left2" size="2" >
+      Top <input type="text" id="top1" size="2" > <br>
+
+      Image 3: Left <input type="text" id="left3" size="2" >
+      Top <input type="text" id="top1" size="2" > <br>
+
+      <input type="button" name="" value="Move All" onclick="changePositions();">
+
+    </form>
+
+  </body>
+</html>
