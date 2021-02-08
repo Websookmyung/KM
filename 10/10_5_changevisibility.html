@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>보이기 스타일 속성 변경</title>
+  </head>
+
+  <body>
+    <div id="outerBox" style="background: blue; width: 550px; height: 300px;" class=""></div>
+    <div id="innerBox" style="background: yellow; width: 450px; height: 200px; position: absolute; left:50px; top:50px" class="">
+      <img id="img1" src="flag_kor.png" width="100px" style="position:absolute; left:50px; top:25px; visibility: visible;" alt="">
+      <img id="img2" src="flag_usa.png" width="100px" style="position:absolute; left:175px; top:25px; visibility: visible;" alt="">
+      <img id="img3" src="logo1.png" width="100px" style="position:absolute; left:300px; top:25px; visibility: visible;" alt="">
+
+    </div>
+
+    <script type="text/javascript">
+      function toggleVisibility(id) {
+        var dom=document.getElementById(id);
+        if (dom.style.visible=="visible")
+          dom.style.visibility="hidden";
+        else
+          dom.style.visibility="visible"
+      }
+    </script>
+
+    Toggle Visibility:
+    <button onclick="toggleVisibility(&img1&);">Image 1</button>
+    <button onclick="toggleVisibility(&img2&);">Image 2</button>
+    <button onclick="toggleVisibility(&img3&);">Image 3</button>
+
+    <script type="text/javascript">
+      function changeColor(id, color)  {
+        document.getElementById(id).style.background=color;
+      }
+    </script>
+    <br>
+    <br>
+    
+    Outer Box:
+    <button onclick="changeColor('outerBox', 'red')"> Red </button>
+    <button onclick="changeColor('outerBox', 'green')"> Green </button>
+    <button onclick="changeColor('outerBox', 'blue')"> Blue </button>
+    <br>
+
+    Inner Box:
+    <button onclick="changeColor('innerBox', 'red')"> Red </button>
+    <button onclick="changeColor('innerBox', 'green')"> Green </button>
+    <button onclick="changeColor('innerBox', 'blue')"> Blue </button>
+
+  </body>
+</html>
