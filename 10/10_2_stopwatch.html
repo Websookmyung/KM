@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>setTimeout() 함수를 이용한 스톱워치 예제</title>
+  </head>
+
+  <body>
+    <script type="text/javascript">
+      var stopped=false;
+
+      // 자체적으로 setTimeout 함수를 이용해 1초마다 start 함수를 호출해 초 값을 주기적으로 증가 
+      function start() {
+        dom=document.getElemenyById("sec");
+        dom.value=parseId(dom.value)+1;
+        if (!stoppted) setTimeout(start, 1000);
+      }
+    </script>
+
+    <h2>Stopwatch</h2>
+    <form class="" action="index.html" method="post">
+      <input type="button" name="" value="Start" onclick="stopped=false; setTimeout(start, 1000);">
+      <input type="button" name="" value="Stop" onclick="stopped=true;">
+      <input type="reset" name="" value="Reset"> <br> <br>
+
+      <input id="sec" type="text" name="" value="0" size="2">
+    </form>
+
+  </body>
+</html>
