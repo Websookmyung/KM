@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>콘텐츠 변경</title>
+  </head>
+
+  <body>
+    <button id="b1">innerHTML</button>
+    <button id="b2">innerHTML</button>
+    <br>
+    <p id="text"> This text will be dramatically changed! </p>
+
+    <script type="text/javascript">
+      document.getElementById("b1").onmouseover=mouseover_innerHTML;
+      document.getElementById("b2").onmouseover=mouseover_innerText;
+
+      document.getElementById("b1").onmouseout=reset_text;
+      document.getElementById("b2").onmouseout=reset_text;
+
+      function mouseover_innerHTML() {  //start와 stop가 번갈아가며 바뀌기
+        document.getElementById("text").innerHTML="<h1>Mouser cursor is over the innerHTML button</h1>";
+      }
+
+      function mouseover_innerText() {  //start와 stop가 번갈아가며 바뀌기
+        document.getElementById("text").innerText="<h1>Mouser cursor is over the innerText button</h1>";
+      }
+
+      function reset_text() {  //start와 stop가 번갈아가며 바뀌기
+        document.getElementById("text").innerHTML="This text will be dramatically changed";
+      }
+    </script>
+
+
+  </body>
+</html>
