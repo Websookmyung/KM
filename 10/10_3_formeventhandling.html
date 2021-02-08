@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>폼 다루기와 이벤트 처리</title>
+  </head>
+
+  <body>
+    <script type="text/javascript">
+      //이벤트 핸들러 함수 정의
+      function add() {
+        var a=document.getElementById("op1").value;
+        var b=document.getElementById("op2").value;
+        document.getElementById("result").value=parseInt(a)+parseInt(b);  //결과: op1과 op2 value 값의 합
+      }
+    </script>
+
+    <form class="" action="index.html" method="post">
+      <input type="text" id="op1" name="" value="" size="2">
+      <input type="text" id="op2" name="" value="" size="2">
+      <input type="button" name="" value="=" onclick="add();">   <!--이벤트 핸들러 호출-->
+      <input type="text" id="result" size="2" name="" value="">
+    </form>
+
+  </body>
+</html>
