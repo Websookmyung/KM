@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>원호 그리기</title>
+  </head>
+
+  <body>
+    <!--캔버스 요소 정의-->
+    <canvas id="myCanvas" width="300" height="300"></canvas>
+    <script type="text/javascript">
+      var canvas=document.getElementById("myCanvas");
+      var myContext=canvas.getContext("2d");   //캔버스 택스트 가져오기
+
+      //캔버스에 그림을 그리는 자바스크립트 코드
+      myContext.beginPath();
+      myContext.arc(30, 100, 20, 0, 1.5*Math.PI); // Math.PI 상수: 각도 지정
+      myContext.stroke();
+
+      myContext.beginPath();
+      myContext.arc(110, 100, 40, 1*Math.PI, 1.5*Math.PI, true); // Math.PI 상수: 각도 지정
+      myContext.closePath();
+      myContext.stroke();
+
+      myContext.beginPath();
+      myContext.arc(240, 100, 60, 0, 2*Math.PI); // Math.PI 상수: 각도 지정
+      myContext.stroke();
+
+    </script>
+
+  </body>
+</html>
