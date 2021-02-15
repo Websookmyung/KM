@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>기본 변화 예제</title>
+  </head>
+
+  <body>
+    <canvas id="myCanvas" width="700" height="700"></canvas>
+    <script type="text/javascript">
+      var canvas=document.getElementById("myCanvas");
+      var myContext=canvas.getContext("2d");   //캔버스 택스트 가져오기
+
+      var imgObj=new Image();
+      imgObj.src="logo1.png";
+
+      imgObj.onload=function() {
+        //original drawing
+        myContext.drawImage(imgObj, 50, 50);
+
+        // 이동변환
+        myContext.translate(300, 0);  // (300, 50) 이동
+        myContext.drawImage(imgObj, 50, 50);
+
+        // 크기 변환
+        myContext.setTransform(1, 0, 0, 1, 0, 0);
+        myContext.scale(1.2, 0.33);   //가로 1.2, 세로 1/3배 스케일
+        myContext.drawImage(imgObj, 40, 800);
+
+        // 회전 변환
+        myContext.setTransform(1, 0, 0, 1, 0, 0);
+        myContext.translate(750, 0);
+        myContext.rotate(Math.PI/4);
+        myContext.drawImage(imgObj, 0, 0);
+
+      }
+
+    </script>
+
+  </body>
+</html>
