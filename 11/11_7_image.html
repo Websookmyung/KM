@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>원호 그리기</title>
+  </head>
+
+  <body>
+    <!--캔버스 요소 정의-->
+    <canvas id="myCanvas" width="700" height="700"></canvas>
+    <script type="text/javascript">
+      var canvas=document.getElementById("myCanvas");
+      var myContext=canvas.getContext("2d");   //캔버스 택스트 가져오기
+
+      var imgObj=new Image();
+      imgObj.src="logo1.png";
+
+      imgObj.onload=function() {
+
+        // (50, 50) 지점에 원래 크기 그대로 이미지 그리기
+        myContext.drawImage(imgObj, 50, 50);
+
+        // 크기 조정하기: (350, 50)  90X100 크기로 이미지 그리기
+        myContext.drawImage(imgObj, 350, 50, 90, 100);
+
+        // 크기 조정하기: (550, 50)  100X100 크기로 이미지 그리기
+        myContext.drawImage(imgObj, 550, 50, 100, 100);
+
+        // 이미지 자르기 후 크기조정
+        // 1) 원본 이미지 (70, 50) 지점에서 70 X 70 크기의 이미지를 자른다
+        // 2) Canvas의 (350, 180) 지점에서 70 X 70 크기로 기르기
+        myContext.drawImage(imgObj, 70, 50, 70, 70, 350, 180, 70, 70);
+
+      }
+
+    </script>
+
+  </body>
+</html>
