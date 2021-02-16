@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+
+  <body>
+    <div id="dragsrc" style="display: block;">
+      <img src="logo1.png" id="logo1" style="display: inline; width: 150px;" draggable="true">
+      <img src="flag_kor.png" id="flag1" style="display: inline; width: 150px;" draggable="false">
+      <img src="flag_usa.png" id="flag2" style="display: inline; width: 150px;">
+
+    </div>
+    <div id="dragprocess"></div>
+
+    <script type="text/javascript">
+      var src=document.getElementById("dragsrc"),
+      srcID, i=0;
+      process=document.getElementById("dragprocess");
+
+      src.ondragstart=function(e) {
+        srcID=e.target.id;
+        process.innerHTML="start:" +srcID+ "<br>";
+      }
+
+      src.ondrag=function(e) {
+        process.innerHTML="start: "+srcID+ "<br> drag: "+srcID+ "["+(i++)+"]";
+      }
+
+      src.ondragend=function(e) {
+        process.innerHTML+="<br>end: "+srcID+"<br>";
+      }
+
+    </script>
+
+  </body>
+</html>
