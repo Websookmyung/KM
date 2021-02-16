@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+
+  </head>
+
+  <body>
+    <div id="dragsrc" style="margin-bottom:20px; display:block;">
+      <img src="logo1.png" id="logo1" style="display: inline; width: 150px;" draggable="true">
+      <img src="flag_kor.png" id="flag1" style="display: inline; width: 150px;" draggable="false">
+      <img src="flag_usa.png" id="flag2" style="display: inline; width: 150px;">
+    </div>
+
+    <div id="droptarget" style="border-color:gray; border-style:solid;"> 드롭 영역 <br> Drop Here  </div>
+
+    <script type="text/javascript">
+      var src=document.getElementById("dragsrc"),
+      srcId,
+      target=document.getElementById("droptarget");
+
+      src.ondragstart=function(e) {   // 드래그 시작 이벤트 핸들러 함수
+        srcId=e.target.id;
+        e.dataTransfer.setData("text", srcId);
+      }
+      target.ondragenter=funstion(e) {  //드래그 영역 진입 이벤트 핸들러 함
+        dropId=e.target.id;
+      }
+      target.ondragover=function(e) {  //드롭 영역 도중 이벤트 핸들러 함수
+        e.preventDefault();
+      }
+      target.ondrop=function(e) {  //드롭 이벤트 핸들러 함수
+        var data=e.dataTransfer.getData("text");
+        e.target.appendChild(document.getElementById(data));
+      }
+
+    </script>
+
+  </body>
+</html>
