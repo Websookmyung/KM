@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>비디오 제어 예제</title>
+    <script type="text/javascript">
+      window.onload=function() {
+        var myVideo=document.getElementById("myvideo"),
+        playBtn=document.getElementById("playbtn"),
+        volumeCtrl=document.getElementById("volctrl"),
+        timeDiv=document.getElementById("time");
+
+        myVideo.addEventListener("canplay", function() {
+          alert("재생 가능합니다.");
+        });
+        myVideo.addEventListener("timeupdate", updateTime);
+        playBtn.addEventListener("click", play);
+        volumeCtrl.addEventListener("change", updataVolume);
+
+        function updateTime() {
+          timeDiv.innerHTML=Math.floor(myVideo.currentTime)+"/"
+          +Math.floor(myVideo.duration)+"(초)";
+        }
+
+        function play() {
+          if(myVideo.paused) {
+            playBtn.innerHTML="일시정지";
+            myVideo.play();
+          } else {
+            playBtn.innerHTML="재생";
+            myVideo.paused();
+          }
+        }
+
+        function updateVolume() {
+          myVideo.volume=volumeCtrl.value;
+        }
+      }
+    </script>
+  </head>
+
+  <body>
+    <video id="myvideo" controld width="500" src="nature.mp4"></video> <br>
+    <button id="playbtn">재생</button>
+    재생시간/총시간: &nbsp; <span id="time"></span> <br>
+    볼륨: &nbsp; <input type="range" id="volctrl" max="1" step="any">
+  </body>
+</html>
