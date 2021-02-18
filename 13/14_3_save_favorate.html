@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <script type="text/javascript">
+      function save_favorate() {
+        var localStorage=window.localStorage;
+        if (!localStorage) {
+          //local storage is not supported by this browser.
+          // do nothing
+        } else {
+          dom=document.getElementByTagName("span");
+          var j=0;
+          for (i=0; i<dom.length; i++) {
+            if (dom[i].firstChild.checkd==true) {
+              localStorage[j]=dom[i].innerText;
+              j++;
+            }
+          }
+          localStorage.numFavorites=j;
+        }
+      }
+    </script>
+  </head>
+  <body>
+
+  </body>
+</html>
