@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+
+    <script type="text/javascript">
+      function view_favorate() {
+        var localStorage=window.localStorage;
+        if (!localStorage) {
+          // local storage is not supported by this browser.
+          //do nothing
+        } else {
+          var numFavorites = localStorage.numFavorites;
+          var dom=document.getElementById("favorate_list");
+          for (i=0; i<numFavorites; i++) {
+            dom.innerHTML=dom.innerHTM+"<li>"+localStorage[i]+"</li>\n";
+          }
+        }
+      }
+    </script>
+
+  </head>
+
+  <body class="booklist" onload="view_favorate();">
+    <p class="head">관심 도서 목록</p>
+    <ol id="favorate_list"></ol>
+  </body>
+</html>
