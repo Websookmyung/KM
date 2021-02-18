@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+
+  </head>
+  <body>
+    <script type="text/javascript">
+      document.getElementById("login_button").onclick=chexkUser;
+
+      function checkUser() {
+        username_in=document.getElementById("username2").value;
+        password_in1=document.getElementById("pass1").value;
+        var localStorage=window.localStorage;
+        if (!localStorage) {
+
+        } else {
+          numUsers=localStorage.numUsers;
+
+          var login_success=false;
+          if (numUsers!=defined) {
+            for (i=0; i<numUsers; i++) {
+              username=localStorage["user"+i];
+              password=localStorage["pass"+i];
+
+              if (username==username_in && password==password_in) {
+                login_success=true;
+                break;
+              }
+            }
+          }
+
+          if (login_success) alert("Login Success!");
+          else alert("Username and password are not matxhed with our database!");
+      }
+    </script>
+  </body>
+</html>
