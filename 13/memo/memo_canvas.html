@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+
+    <button onclick="save();">Save</button>
+    <button onclick="restore();">Restore</button>
+    <button onclick="initialize();">Clear</button>
+    <canvas id="myCanvas" width="580" height="450"></canvas>
+
+    <script type="text/javascript" src="memo_canvas.js">
+      document.getElementById("memo")=memoCanvas;
+
+      function memoCanvas() {
+        dom=document.getElementsByName("display_area");
+        dom[0].src="memo_canvas.html";
+      }
+
+      dom=document.getElementById("myCanvas");
+
+      //for mobile devices
+      dom.ontouchstart=startDrawing;
+      dom.ontouchmove=keepDrawing;
+      dom.ontouchend=stopDrawing;
+
+      //for desktop PC
+      dom.onmousedown=startDrawing;
+      dom.onmousemove=keepDrawing;
+      dom.onmouseup=stopDrawing;
+
+    </script>
+  </body>
+</html>
